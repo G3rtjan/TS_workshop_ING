@@ -1,0 +1,9 @@
+# cell 1
+from google.colab import files
+uploaded = files.upload()
+
+# cell 2
+import io
+import pandas as pd
+df = pd.read_csv(io.BytesIO(uploaded["your_file_name"]))
+df.head()
